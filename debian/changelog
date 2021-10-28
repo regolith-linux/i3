@@ -1,3 +1,9 @@
+i3-gaps-wm (4.20-2) bionic; urgency=medium
+
+  * Distro version bump for package builder 
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Thu, 28 Oct 2021 07:43:50 -0700
+
 i3-gaps-wm (4.20-1regolith) bionic; urgency=medium
 
   * Release of i3-gaps-wm 4.20 for Regolith
