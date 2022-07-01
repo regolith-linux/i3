@@ -6,7 +6,7 @@
 project(
   'i3',
   'c',
-  version: '4.20',
+  version: '4.20.1',
   default_options: [
     'c_std=c11',
     'warning_level=1',  # enable all warnings (-Wall)
@@ -63,7 +63,7 @@ config_h = declare_dependency(
   sources: vcs_tag(
     input: config_h_in,
     output: 'config.h',
-    fallback: meson.project_version() + '-non-git',
+    fallback: meson.project_version() + ' (2021-11-03)',
   )
 )
 
@@ -229,6 +229,8 @@ if get_option('mans')
       output: '@BASENAME@.1',
       command: [
         xmlto,
+        '--stringparam',
+        'man.th.title.max.length=30',
         'man',
         '-o',
         '@OUTDIR@',
